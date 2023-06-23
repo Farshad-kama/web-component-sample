@@ -1,7 +1,15 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { createApplication } from '@angular/platform-browser';
+import { createCustomElement } from '@angular/elements';
+import { InputComponent } from './app/ui/input/input.component';
 
-import { AppModule } from './app/app.module';
+(async () => {
+  const app = await createApplication({
+    providers: [],
+  });
 
+  const inputElement = createCustomElement(InputComponent, {
+    injector: app.injector,
+  });
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+  customElements.define('fk-input', inputElement);
+})();
