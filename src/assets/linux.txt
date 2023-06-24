@@ -1,5 +1,22 @@
-sudo nano /etc/apt/sources.list
+install @angular/elements
+ng g c input --inline-style --inline-template --standalone true
 
+"build": "ng build --output-hashing=none --configuration production",
+"package": "cat dist/test/runtime.js dist/test/polyfills.js dist/test/main.js > dist/test/test-lib.js"
+
+sudo -i ==> root
+
+if installed npm do it==>
+$ sudo apt remove npm
+
+nstall cURL and nvm
+$ sudo apt-get install curl
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
+Close your current terminal, reopen it, and install Node
+$ nvm install --lts
+
+sudo nano /etc/apt/sources.list
 
 deb http://old-releases.ubuntu.com/ubuntu/ disco main restricted universe multiverse 
 deb http://old-releases.ubuntu.com/ubuntu/ disco-security main restricted universe multiverse 
